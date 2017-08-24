@@ -41,8 +41,8 @@ function! XmlTextObjA()
 endfunction
 
 function s:XmlTextObj(pattern, letter)
-  let jsx_backward = searchpos(s:RE_HAS_JSX, 'bcWn')
-  let jsx_forward = searchpos(s:RE_HAS_JSX, 'ceWn')
+  let jsx_backward = searchpos(s:RE_HAS_JSX, 'bcWn', line('.'))
+  let jsx_forward = searchpos(s:RE_HAS_JSX, 'ceWn', line('.'))
   if s:nomatch(jsx_forward) || s:nomatch(jsx_backward)
     return s:NonJsxSelection(a:pattern, a:letter)
   else
