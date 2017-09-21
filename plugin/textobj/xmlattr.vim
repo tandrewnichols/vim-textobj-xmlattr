@@ -29,7 +29,7 @@ call textobj#user#plugin('xmlattr', {
 \     'select-i': 'ix',
 \     'select-a-function': 'XmlTextObjA',
 \     'select-a': 'ax',
-\   },
+\   }
 \ })
 
 function! XmlTextObjI()
